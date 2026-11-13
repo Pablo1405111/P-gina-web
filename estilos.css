@@ -1,0 +1,437 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+:root {
+    --fondo: #101D32;
+    --fondo-secundario: #16263D;
+    --tarjeta: #1B2D46;
+    --amarillo: #F2C94C;
+    --blanco: #F5F7FA;
+    --gris: #AAB7C8;
+    --borde: #2A3D57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fondo);
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* MENÚ */
+
+header {
+    background-color: var(--fondo);
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--borde);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--blanco);
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--amarillo);
+}
+
+nav ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+nav ul a {
+    color: var(--gris);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul a:hover {
+    color: var(--amarillo);
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background:
+        linear-gradient(90deg, rgba(16, 29, 50, 0.95), rgba(16, 29, 50, 0.55)),
+        url("https://images.unsplash.com/photo-1546519638-68e109498ffc")
+        center/cover no-repeat;
+}
+
+.hero-contenido {
+    max-width: 650px;
+}
+
+.etiqueta {
+    color: var(--amarillo);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 54px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-contenido > p:not(.etiqueta) {
+    color: var(--gris);
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--amarillo);
+    color: var(--fondo);
+    padding: 12px 23px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--blanco);
+}
+
+/* INTRODUCCIÓN */
+
+.sobre {
+    padding: 85px 15%;
+    background-color: var(--fondo-secundario);
+    text-align: center;
+}
+
+.seccion-intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.seccion-intro h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.seccion-intro .descripcion {
+    color: var(--gris);
+    margin-top: 10px;
+}
+
+.sobre p {
+    max-width: 850px;
+    margin: 15px auto;
+    color: var(--gris);
+    font-size: 16px;
+}
+
+/* SECCIÓN DRAFT */
+
+.draft {
+    padding: 85px 8%;
+}
+
+.temporada {
+    margin-top: 55px;
+}
+
+.temporada h3 {
+    font-size: 25px;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.temporada h3 span {
+    color: var(--amarillo);
+    font-weight: normal;
+    font-size: 17px;
+    margin-left: 8px;
+}
+
+/* TARJETAS DEL DRAFT */
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.tarjeta {
+    background-color: var(--tarjeta);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.25s, background-color 0.25s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    background-color: #203550;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+}
+
+.pick {
+    color: var(--amarillo);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.tarjeta h4 {
+    color: var(--blanco);
+    font-size: 20px;
+    margin: 5px 0 14px;
+}
+
+.tarjeta p,
+.favorito p {
+    color: var(--gris);
+    font-size: 14px;
+    margin: 7px 0;
+}
+
+.tarjeta strong,
+.favorito strong {
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+/* FOTOGRAFÍAS */
+
+.foto-jugador {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: top center;
+    background-color: var(--fondo-secundario);
+}
+
+/* FAVORITOS */
+
+.favoritos {
+    padding: 85px 8%;
+    background-color: var(--fondo-secundario);
+}
+
+.contenedor-favoritos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.favorito {
+    background-color: var(--tarjeta);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.25s;
+}
+
+.favorito:hover {
+    transform: translateY(-5px);
+}
+
+.favorito h3 {
+    color: var(--amarillo);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* ESTADÍSTICAS */
+
+.estadisticas {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--borde);
+}
+
+.estadisticas h4 {
+    color: var(--amarillo);
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.estadisticas p {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+/* CONTACTO */
+
+.contacto {
+    padding: 85px 20px;
+    text-align: center;
+}
+
+.contacto form {
+    max-width: 520px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--fondo-secundario);
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+    border-color: var(--amarillo);
+}
+
+.contacto textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contacto button {
+    background-color: var(--amarillo);
+    color: var(--fondo);
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contacto button:hover {
+    background-color: var(--blanco);
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #0B1525;
+    border-top: 1px solid var(--borde);
+}
+
+footer p {
+    color: var(--gris);
+    font-size: 12px;
+    margin: 4px;
+}
+
+footer strong {
+    color: var(--amarillo);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    .contenedor-tarjetas,
+    .contenedor-favoritos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+}
+
+/* MÓVILES */
+
+@media (max-width: 600px) {
+    .contenedor-tarjetas,
+    .contenedor-favoritos {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .sobre,
+    .draft,
+    .favoritos {
+        padding: 60px 6%;
+    }
+
+    .seccion-intro h2 {
+        font-size: 27px;
+    }
+
+    .foto-jugador {
+        height: 260px;
+    }
+}
