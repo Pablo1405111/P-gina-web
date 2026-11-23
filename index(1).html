@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasketZone | The Home of Basketball</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#inicio" class="logo">BASKET<span>ZONE</span></a>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">La NBA</a></li>
+                <li><a href="#draft">Draft</a></li>
+                <li><a href="#favoritos">Favoritos</a></li>
+                <li><a href="#fundamentos">Fundamentos</a></li>
+                <li><a href="#quiz">Test</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        <button class="tema-btn" id="temaBtn" type="button" aria-label="Cambiar tema">☀️ Cambiar tema</button>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-contenido">
+            <p class="etiqueta">EL MUNDO DEL BALONCESTO</p>
+            <h1>THE HOME OF<br>BASKETBALL</h1>
+            <p>Descubre las estrellas y las nuevas promesas de la NBA.</p>
+            <a href="#draft" class="boton">Explorar Drafts</a>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="seccion-intro">
+            <p class="etiqueta">CONOCE LA COMPETICIÓN</p>
+            <h2>¿QUÉ ES LA NBA?</h2>
+        </div>
+        <p>La NBA (National Basketball Association) es la principal liga profesional de baloncesto de Estados Unidos y una de las competiciones deportivas más importantes del mundo. Está formada por 30 equipos y reúne a algunos de los mejores jugadores de baloncesto del planeta.</p>
+        <p>Cada año, los equipos incorporan nuevos talentos mediante el NBA Draft, un evento en el que seleccionan a jóvenes jugadores procedentes de universidades y otras competiciones.</p>
+    </section>
+
+    <section class="draft" id="draft">
+        <div class="seccion-intro">
+            <p class="etiqueta">EL FUTURO DE LA LIGA</p>
+            <h2>NBA DRAFT</h2>
+            <p class="descripcion">Los tres primeros jugadores seleccionados en los últimos cinco años.</p>
+        </div>
+
+        <div class="controles-draft">
+            <label for="buscadorJugador">Buscar jugador</label>
+            <input id="buscadorJugador" type="search" placeholder="Ej. Cooper Flagg, Wembanyama...">
+            <label for="filtroDraft">Filtrar por año</label>
+            <select id="filtroDraft"><option value="todos">Todos los años</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option></select>
+            <p id="contadorJugadores" class="contador-resultados" aria-live="polite"></p>
+        </div>
+
+        <div class="temporada" data-year="2026">
+            <h3>2026 <span>Draft</span></h3>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1643407.png" alt="AJ Dybantsa" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 01</span><h4>AJ Dybantsa</h4>
+                        <p><strong>Equipo:</strong> Washington Wizards</p>
+                        <p><strong>Universidad:</strong> BYU</p>
+                        <p><strong>Procedencia:</strong> Brockton, Massachusetts</p>
+                        <p><strong>Posición:</strong> Alero</p>
+                        <p><strong>Altura:</strong> 2,06 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1643408.png" alt="Darryn Peterson" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 02</span><h4>Darryn Peterson</h4>
+                        <p><strong>Equipo:</strong> Utah Jazz</p>
+                        <p><strong>Universidad:</strong> Kansas</p>
+                        <p><strong>Procedencia:</strong> Canton, Ohio</p>
+                        <p><strong>Posición:</strong> Base / Escolta</p>
+                        <p><strong>Altura:</strong> 1,96 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1643409.png" alt="Cameron Boozer" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 03</span><h4>Cameron Boozer</h4>
+                        <p><strong>Equipo:</strong> Memphis Grizzlies</p>
+                        <p><strong>Universidad:</strong> Duke</p>
+                        <p><strong>Procedencia:</strong> Miami, Florida</p>
+                        <p><strong>Posición:</strong> Ala-pívot / Pívot</p>
+                        <p><strong>Altura:</strong> 2,03 m</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="temporada" data-year="2025">
+            <h3>2025 <span>Draft</span></h3>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1642260.png" alt="Cooper Flagg" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 01</span><h4>Cooper Flagg</h4>
+                        <p><strong>Equipo:</strong> Dallas Mavericks</p>
+                        <p><strong>Universidad:</strong> Duke</p>
+                        <p><strong>Procedencia:</strong> Newport, Maine</p>
+                        <p><strong>Posición:</strong> Alero / Ala-pívot</p>
+                        <p><strong>Altura:</strong> 2,03 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1642261.png" alt="Dylan Harper" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 02</span><h4>Dylan Harper</h4>
+                        <p><strong>Equipo:</strong> San Antonio Spurs</p>
+                        <p><strong>Universidad:</strong> Rutgers</p>
+                        <p><strong>Procedencia:</strong> Franklin Lakes, Nueva Jersey</p>
+                        <p><strong>Posición:</strong> Base / Escolta</p>
+                        <p><strong>Altura:</strong> 1,96 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1642262.png" alt="VJ Edgecombe" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 03</span><h4>VJ Edgecombe</h4>
+                        <p><strong>Equipo:</strong> Philadelphia 76ers</p>
+                        <p><strong>Universidad:</strong> Baylor</p>
+                        <p><strong>Procedencia:</strong> Bimini, Bahamas</p>
+                        <p><strong>Posición:</strong> Escolta</p>
+                        <p><strong>Altura:</strong> 1,93 m</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="temporada" data-year="2024">
+            <h3>2024 <span>Draft</span></h3>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1642258.png" alt="Zaccharie Risacher" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 01</span><h4>Zaccharie Risacher</h4>
+                        <p><strong>Equipo:</strong> Atlanta Hawks</p>
+                        <p><strong>Equipo anterior:</strong> JL Bourg-en-Bresse</p>
+                        <p><strong>Procedencia:</strong> Málaga, España</p>
+                        <p><strong>Posición:</strong> Alero</p>
+                        <p><strong>Altura:</strong> 2,06 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1642259.png" alt="Alex Sarr" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 02</span><h4>Alex Sarr</h4>
+                        <p><strong>Equipo:</strong> Washington Wizards</p>
+                        <p><strong>Equipo anterior:</strong> Perth Wildcats</p>
+                        <p><strong>Procedencia:</strong> Burdeos, Francia</p>
+                        <p><strong>Posición:</strong> Ala-pívot</p>
+                        <p><strong>Altura:</strong> 2,13 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1642263.png" alt="Reed Sheppard" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 03</span><h4>Reed Sheppard</h4>
+                        <p><strong>Equipo:</strong> Houston Rockets</p>
+                        <p><strong>Universidad:</strong> Kentucky</p>
+                        <p><strong>Procedencia:</strong> London, Kentucky</p>
+                        <p><strong>Posición:</strong> Base / Escolta</p>
+                        <p><strong>Altura:</strong> 1,88 m</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="temporada" data-year="2023">
+            <h3>2023 <span>Draft</span></h3>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1641705.png" alt="Victor Wembanyama" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 01</span><h4>Victor Wembanyama</h4>
+                        <p><strong>Equipo:</strong> San Antonio Spurs</p>
+                        <p><strong>Equipo anterior:</strong> Metropolitans 92</p>
+                        <p><strong>Procedencia:</strong> Le Chesnay, Francia</p>
+                        <p><strong>Posición:</strong> Pívot</p>
+                        <p><strong>Altura:</strong> 2,24 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1641631.png" alt="Brandon Miller" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 02</span><h4>Brandon Miller</h4>
+                        <p><strong>Equipo:</strong> Charlotte Hornets</p>
+                        <p><strong>Universidad:</strong> Alabama</p>
+                        <p><strong>Procedencia:</strong> Antioch, Tennessee</p>
+                        <p><strong>Posición:</strong> Alero</p>
+                        <p><strong>Altura:</strong> 2,06 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1630703.png" alt="Scoot Henderson" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 03</span><h4>Scoot Henderson</h4>
+                        <p><strong>Equipo:</strong> Portland Trail Blazers</p>
+                        <p><strong>Equipo anterior:</strong> G League Ignite</p>
+                        <p><strong>Procedencia:</strong> Marietta, Georgia</p>
+                        <p><strong>Posición:</strong> Base</p>
+                        <p><strong>Altura:</strong> 1,88 m</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="temporada" data-year="2022">
+            <h3>2022 <span>Draft</span></h3>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1631094.png" alt="Paolo Banchero" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 01</span><h4>Paolo Banchero</h4>
+                        <p><strong>Equipo:</strong> Orlando Magic</p>
+                        <p><strong>Universidad:</strong> Duke</p>
+                        <p><strong>Procedencia:</strong> Seattle, Washington</p>
+                        <p><strong>Posición:</strong> Ala-pívot</p>
+                        <p><strong>Altura:</strong> 2,08 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1631096.png" alt="Chet Holmgren" class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 02</span><h4>Chet Holmgren</h4>
+                        <p><strong>Equipo:</strong> Oklahoma City Thunder</p>
+                        <p><strong>Universidad:</strong> Gonzaga</p>
+                        <p><strong>Procedencia:</strong> Minneapolis, Minnesota</p>
+                        <p><strong>Posición:</strong> Pívot</p>
+                        <p><strong>Altura:</strong> 2,13 m</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1631098.png" alt="Jabari Smith Jr." class="foto-jugador">
+                    <div class="contenido-tarjeta">
+                        <span class="pick">PICK 03</span><h4>Jabari Smith Jr.</h4>
+                        <p><strong>Equipo:</strong> Houston Rockets</p>
+                        <p><strong>Universidad:</strong> Auburn</p>
+                        <p><strong>Procedencia:</strong> Fayetteville, Georgia</p>
+                        <p><strong>Posición:</strong> Ala-pívot</p>
+                        <p><strong>Altura:</strong> 2,08 m</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="favoritos" id="favoritos">
+        <div class="seccion-intro">
+            <p class="etiqueta">MIS ELECCIONES</p>
+            <h2>MIS JUGADORES FAVORITOS</h2>
+            <p class="descripcion">Tres jugadores que destacan por su talento y trayectoria.</p>
+        </div>
+
+        <div class="contenedor-favoritos">
+            <article class="favorito">
+                <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png" alt="Stephen Curry" class="foto-jugador">
+                <div class="contenido-tarjeta">
+                    <h3>Stephen Curry</h3>
+                    <p><strong>Equipo:</strong> Golden State Warriors</p>
+                    <p><strong>Universidad:</strong> Davidson</p>
+                    <p><strong>Procedencia:</strong> Akron, Ohio</p>
+                    <p><strong>Posición:</strong> Base</p>
+                    <p><strong>Altura:</strong> 1,88 m</p>
+                    <p><strong>Draft:</strong> 2009 - Pick 7</p>
+                    <div class="estadisticas">
+                        <h4>Promedios de carrera</h4>
+                        <p>24,8 puntos · 4,7 rebotes · 6,3 asistencias</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="favorito">
+                <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/202691.png" alt="Klay Thompson" class="foto-jugador">
+                <div class="contenido-tarjeta">
+                    <h3>Klay Thompson</h3>
+                    <p><strong>Equipo:</strong> Dallas Mavericks</p>
+                    <p><strong>Universidad:</strong> Washington State</p>
+                    <p><strong>Procedencia:</strong> Los Ángeles, California</p>
+                    <p><strong>Posición:</strong> Escolta</p>
+                    <p><strong>Altura:</strong> 1,98 m</p>
+                    <p><strong>Draft:</strong> 2011 - Pick 11</p>
+                    <div class="estadisticas">
+                        <h4>Promedios de carrera</h4>
+                        <p>19,5 puntos · 3,5 rebotes · 2,3 asistencias</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="favorito">
+                <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/202681.png" alt="Kyrie Irving" class="foto-jugador">
+                <div class="contenido-tarjeta">
+                    <h3>Kyrie Irving</h3>
+                    <p><strong>Equipo:</strong> Dallas Mavericks</p>
+                    <p><strong>Universidad:</strong> Duke</p>
+                    <p><strong>Procedencia:</strong> Melbourne, Australia</p>
+                    <p><strong>Posición:</strong> Base / Escolta</p>
+                    <p><strong>Altura:</strong> 1,88 m</p>
+                    <p><strong>Draft:</strong> 2011 - Pick 1</p>
+                    <div class="estadisticas">
+                        <h4>Promedios de carrera</h4>
+                        <p>23,7 puntos · 4,1 rebotes · 5,6 asistencias</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <section class="fundamentos" id="fundamentos">
+        <div class="seccion-intro">
+            <p class="etiqueta">CONOCE EL JUEGO</p>
+            <h2>FUNDAMENTOS DEL BALONCESTO</h2>
+            <p class="descripcion">Conceptos esenciales para entender mejor lo que sucede en la pista.</p>
+        </div>
+        <div class="info-grid">
+            <article class="info-card"><span class="info-icon">🏀</span><h3>Reglas básicas</h3><p>El objetivo es anotar más puntos que el rival. Una canasta dentro de la línea de triple vale 2 puntos, desde fuera vale 3 y cada tiro libre convertido suma 1.</p><p>En la NBA se juegan cuatro cuartos de 12 minutos. Si hay empate, se disputa una prórroga de 5 minutos.</p></article>
+            <article class="info-card"><span class="info-icon">⏱️</span><h3>Violaciones y tiempos</h3><p>La regla de 24 segundos obliga al equipo atacante a intentar un lanzamiento que toque el aro dentro de ese tiempo. También existen los 8 segundos para pasar el balón a campo ofensivo y los pasos o dobles.</p></article>
+            <article class="info-card"><span class="info-icon">🎯</span><h3>Posiciones</h3><p><strong>Base:</strong> organiza el ataque. <strong>Escolta:</strong> suele destacar en el lanzamiento. <strong>Alero:</strong> jugador versátil. <strong>Ala-pívot:</strong> combina juego interior y exterior. <strong>Pívot:</strong> suele jugar cerca del aro y proteger la zona.</p></article>
+            <article class="info-card"><span class="info-icon">📊</span><h3>Estadísticas clave</h3><p><strong>PTS:</strong> puntos. <strong>REB:</strong> rebotes. <strong>AST:</strong> asistencias. <strong>STL:</strong> robos. <strong>BLK:</strong> tapones. <strong>FG%:</strong> porcentaje de tiros de campo. Un doble-doble se consigue al alcanzar 10 o más en dos categorías estadísticas.</p></article>
+            <article class="info-card"><span class="info-icon">🏆</span><h3>Temporada y Playoffs</h3><p>Los equipos disputan una temporada regular para mejorar su posición en la clasificación. Después, los mejores equipos de cada conferencia compiten en los Playoffs, eliminatorias que culminan en las Finales de la NBA.</p></article>
+            <article class="info-card"><span class="info-icon">🌎</span><h3>Conferencias y divisiones</h3><p>La NBA se organiza en dos conferencias: Este y Oeste. Cada una se divide en tres divisiones. Los equipos compiten durante la temporada para conseguir una buena posición de cara a la postemporada.</p></article>
+        </div>
+    </section>
+
+    <section class="quiz" id="quiz">
+        <div class="seccion-intro">
+            <p class="etiqueta">PON A PRUEBA TUS CONOCIMIENTOS</p>
+            <h2>¿CUÁNTO SABES DE NBA?</h2>
+            <p class="descripcion">Responde a estas cinco preguntas y comprueba tu resultado.</p>
+        </div>
+        <div class="quiz-caja">
+            <div class="quiz-progreso"><span id="quizProgreso">Pregunta 1 de 5</span><span id="quizPuntos">0 aciertos</span></div>
+            <h3 id="preguntaTexto">¿Cuántos puntos vale un tiro desde detrás de la línea de triple?</h3>
+            <div id="opcionesQuiz" class="opciones-quiz"></div>
+            <p id="feedbackQuiz" class="feedback-quiz" aria-live="polite"></p>
+            <button id="siguientePregunta" class="boton" type="button" disabled>Siguiente pregunta</button>
+            <button id="reiniciarQuiz" class="boton boton-secundario" type="button" hidden>Volver a jugar</button>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="seccion-intro">
+            <p class="etiqueta">HABLEMOS DE BALONCESTO</p>
+            <h2>CONTACTO</h2>
+            <p class="descripcion">¿Cuál es tu jugador favorito? Déjame tu opinión.</p>
+        </div>
+        <form>
+            <input type="text" placeholder="Tu nombre">
+            <input type="email" placeholder="Tu correo electrónico">
+            <textarea placeholder="Escribe tu mensaje"></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </section>
+
+    <div id="modalJugador" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+        <div class="modal-contenido"><button class="cerrar-modal" id="cerrarModal" aria-label="Cerrar">×</button><h2 id="modalTitulo">Jugador</h2><div id="modalTexto"></div></div>
+    </div>
+    <button id="volverArriba" class="volver-arriba" type="button" aria-label="Volver arriba">↑</button>
+    <footer>
+        <p><strong>BASKETZONE</strong></p>
+        <p>THE HOME OF BASKETBALL · 2026</p>
+    </footer>
+<script>
+// BASKETZONE: funciones interactivas de la página
+const buscador = document.getElementById('buscadorJugador');
+const filtro = document.getElementById('filtroDraft');
+const temporadas = [...document.querySelectorAll('.temporada')];
+const contador = document.getElementById('contadorJugadores');
+
+function filtrarDraft() {
+    const texto = (buscador.value || '').toLowerCase().trim();
+    const anio = filtro.value;
+    let visibles = 0;
+    temporadas.forEach(temporada => {
+        const coincideAnio = anio === 'todos' || temporada.dataset.year === anio;
+        let tarjetasVisibles = 0;
+        temporada.querySelectorAll('.tarjeta').forEach(tarjeta => {
+            const coincideTexto = tarjeta.innerText.toLowerCase().includes(texto);
+            tarjeta.hidden = !(coincideAnio && coincideTexto);
+            if (!tarjeta.hidden) tarjetasVisibles++;
+        });
+        temporada.hidden = !coincideAnio || tarjetasVisibles === 0;
+        visibles += tarjetasVisibles;
+    });
+    contador.textContent = `${visibles} jugador${visibles === 1 ? '' : 'es'} encontrado${visibles === 1 ? '' : 's'}`;
+}
+buscador.addEventListener('input', filtrarDraft);
+filtro.addEventListener('change', filtrarDraft);
+filtrarDraft();
+
+// Añade botones de información y favoritos a las tarjetas del Draft.
+document.querySelectorAll('.tarjeta').forEach(tarjeta => {
+    const contenido = tarjeta.querySelector('.contenido-tarjeta');
+    const nombre = tarjeta.querySelector('h4')?.textContent || 'Jugador';
+    const acciones = document.createElement('div');
+    acciones.className = 'acciones-tarjeta';
+    acciones.innerHTML = '<button type="button" class="btn-detalles">Ver ficha</button><button type="button" class="btn-favorito" aria-pressed="false">☆ Favorito</button>';
+    contenido.appendChild(acciones);
+    acciones.querySelector('.btn-detalles').addEventListener('click', () => abrirModal(nombre, contenido.innerHTML.replace(/<div class="acciones-tarjeta">[\s\S]*?<\/div>$/, '')));
+    acciones.querySelector('.btn-favorito').addEventListener('click', e => {
+        const btn = e.currentTarget;
+        const activo = btn.getAttribute('aria-pressed') !== 'true';
+        btn.setAttribute('aria-pressed', String(activo));
+        btn.textContent = activo ? '★ Guardado' : '☆ Favorito';
+        tarjeta.classList.toggle('marcado-favorito', activo);
+    });
+});
+
+// También permite abrir fichas de los jugadores favoritos.
+document.querySelectorAll('.favorito').forEach(tarjeta => {
+    const contenido = tarjeta.querySelector('.contenido-tarjeta');
+    const nombre = tarjeta.querySelector('h3')?.textContent || 'Jugador';
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'btn-detalles'; btn.textContent = 'Ver ficha completa';
+    btn.addEventListener('click', () => abrirModal(nombre, contenido.innerHTML));
+    contenido.appendChild(btn);
+});
+
+const modal = document.getElementById('modalJugador');
+function abrirModal(nombre, contenido) {
+    document.getElementById('modalTitulo').textContent = nombre;
+    document.getElementById('modalTexto').innerHTML = contenido;
+    modal.classList.add('abierto'); modal.setAttribute('aria-hidden', 'false');
+}
+function cerrarModal() { modal.classList.remove('abierto'); modal.setAttribute('aria-hidden', 'true'); }
+document.getElementById('cerrarModal').addEventListener('click', cerrarModal);
+modal.addEventListener('click', e => { if (e.target === modal) cerrarModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarModal(); });
+
+// Cambiar entre tema oscuro y claro.
+document.getElementById('temaBtn').addEventListener('click', () => {
+    document.body.classList.toggle('tema-claro');
+    const claro = document.body.classList.contains('tema-claro');
+    document.getElementById('temaBtn').textContent = claro ? '🌙 Tema oscuro' : '☀️ Cambiar tema';
+});
+
+// Botón para volver al inicio.
+const arriba = document.getElementById('volverArriba');
+window.addEventListener('scroll', () => arriba.classList.toggle('visible', window.scrollY > 450));
+arriba.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+
+// Mini test interactivo.
+const preguntas = [
+ {q:'¿Cuántos puntos vale un tiro desde detrás de la línea de triple?', o:['1 punto','2 puntos','3 puntos'], c:2, e:'Un lanzamiento convertido desde más allá de la línea de triple suma 3 puntos.'},
+ {q:'¿Cuánto tiempo tiene un equipo para lanzar en una posesión?', o:['14 segundos','24 segundos','30 segundos'], c:1, e:'El reloj de posesión de la NBA es de 24 segundos.'},
+ {q:'¿Qué jugador es conocido por revolucionar el lanzamiento de tres puntos?', o:['Stephen Curry','Shaquille O’Neal','Tim Duncan'], c:0, e:'Stephen Curry es uno de los grandes referentes del lanzamiento exterior.'},
+ {q:'¿Cuántos jugadores de cada equipo están en pista al mismo tiempo?', o:['4','5','6'], c:1, e:'Cada equipo juega con cinco jugadores en la pista.'},
+ {q:'¿Qué significan las siglas MVP?', o:['Most Valuable Player','Maximum Victory Points','Most Versatile Position'], c:0, e:'MVP significa Most Valuable Player, el jugador más valioso.'}
+];
+let preguntaActual = 0, aciertos = 0, respondida = false;
+const preguntaTexto = document.getElementById('preguntaTexto');
+const opciones = document.getElementById('opcionesQuiz');
+const feedback = document.getElementById('feedbackQuiz');
+const siguiente = document.getElementById('siguientePregunta');
+const reiniciar = document.getElementById('reiniciarQuiz');
+function mostrarPregunta() {
+    const p = preguntas[preguntaActual]; respondida = false;
+    document.getElementById('quizProgreso').textContent = `Pregunta ${preguntaActual + 1} de ${preguntas.length}`;
+    document.getElementById('quizPuntos').textContent = `${aciertos} aciertos`;
+    preguntaTexto.textContent = p.q; opciones.innerHTML = ''; feedback.textContent = '';
+    siguiente.disabled = true; siguiente.hidden = false; reiniciar.hidden = true;
+    p.o.forEach((opcion, i) => {
+        const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'opcion-quiz'; btn.textContent = opcion;
+        btn.addEventListener('click', () => responder(i)); opciones.appendChild(btn);
+    });
+}
+function responder(indice) {
+    if (respondida) return; respondida = true;
+    const p = preguntas[preguntaActual];
+    [...opciones.children].forEach((btn, i) => { btn.disabled = true; if (i === p.c) btn.classList.add('correcta'); else if (i === indice) btn.classList.add('incorrecta'); });
+    if (indice === p.c) { aciertos++; feedback.textContent = '¡Correcto! ' + p.e; }
+    else feedback.textContent = 'No es correcto. ' + p.e;
+    document.getElementById('quizPuntos').textContent = `${aciertos} aciertos`;
+    siguiente.disabled = false;
+}
+siguiente.addEventListener('click', () => {
+    preguntaActual++;
+    if (preguntaActual < preguntas.length) mostrarPregunta();
+    else { preguntaTexto.textContent = `¡Test terminado! Has conseguido ${aciertos} de ${preguntas.length} aciertos.`; opciones.innerHTML = ''; feedback.textContent = aciertos === 5 ? '¡Impresionante! Dominas el baloncesto.' : '¡Buen trabajo! Puedes volver a intentarlo para mejorar tu resultado.'; siguiente.hidden = true; reiniciar.hidden = false; document.getElementById('quizProgreso').textContent = 'Resultado final'; }
+});
+reiniciar.addEventListener('click', () => { preguntaActual = 0; aciertos = 0; mostrarPregunta(); });
+mostrarPregunta();
+
+// El formulario es una demostración local: no envía datos a ningún servidor.
+document.querySelector('.contacto form').addEventListener('submit', e => {
+    e.preventDefault();
+    const nombre = e.currentTarget.querySelector('input[type="text"]').value.trim();
+    const mensaje = e.currentTarget.querySelector('textarea').value.trim();
+    if (!nombre || !mensaje) { alert('Por favor, escribe tu nombre y un mensaje.'); return; }
+    alert(`¡Gracias, ${nombre}! Tu mensaje se ha preparado correctamente. Esta web todavía no tiene un servidor para recibirlo.`);
+    e.currentTarget.reset();
+});
+</script>
+</body>
+</html>
